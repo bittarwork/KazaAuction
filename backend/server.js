@@ -9,6 +9,9 @@ require("dotenv").config();
 
 // cors
 const cors = require("cors");
+const CorsOrigin = { 
+  origin : "http://127.0.0.1:5500"
+}
 app.use(cors());
 
 // middleware
@@ -17,7 +20,6 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use((req, res, next) => {
-  let reqBody = req.body;
   let reqMethode = req.method;
   let reqUrl = req.url;
   console.log(`a request has arrived to the server with this information:
