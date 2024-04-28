@@ -1,0 +1,36 @@
+{
+  "name": "express-mongoose",
+  "author": "mochamad-rafli-ramadhan",
+  "license": "MIT",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x",
+    "npm": "8.x"
+  },
+  "description": "Node.js Restful CRUD and Auth API with Node.js, Express, Mongoose and MongoDB Atlas",
+  "private": false,
+  "main": "server.js",
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongoose",
+    "mongodb atlas"
+  ],
+  "scripts": {
+    "dev": "nodemon ./server.js",
+    "start": "NODE_ENV=production node ./server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.3",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
