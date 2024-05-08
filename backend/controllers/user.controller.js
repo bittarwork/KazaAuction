@@ -39,7 +39,7 @@ exports.newUser = (req, res) => {
           role: role,
           updatedScreeningResult: "",
         });
-        console.log(newUser);
+        // console.log(newUser);
         newUser
           .save()
           .then((user) => {

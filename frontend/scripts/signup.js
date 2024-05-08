@@ -15,28 +15,28 @@ document.getElementById("submit").addEventListener("click", function (event) {
   console.log(bodyreq);
 
   // Send form data to the API
-  // fetch("http://localhost:5000/KazaAuctionApi/register", {
-  //   method: "POST",
-  //   body: bodyreq,
-  // }).then((res) => {
-  //   console.log(res);
-  // });
-  // .then(function (response) {
-  //   if (response.ok) {
-  //     // Registration successful
-  //     response.json().then(function (data) {
-  //       alert(data.message);
-  //       form.reset(); // Reset the form
-  //     });
-  //   } else {
-  //     // Registration failed
-  //     response.json().then(function (data) {
-  //       alert(data.message);
-  //     });
-  //   }
-  // })
-  // .catch(function (error) {
-  //   console.log(error);
-  //   alert("An error occurred during registration.");
-  // });
+  fetch("http://localhost:5000/KazaAuctionApi/register", {
+    method: "POST",
+    body: bodyreq,
+  }).then((res) => {
+    console.log(res);
+  })
+  .then(function (response) {
+    if (response.ok) {
+      // Registration successful
+      response.json().then(function (data) {
+        alert(data.message);
+        form.reset(); // Reset the form
+      });
+    } else {
+      // Registration failed
+      response.json().then(function (data) {
+        alert(data.message);
+      });
+    }
+  })
+  .catch(function (error) {
+    console.log(error);
+    alert("An error occurred during registration.");
+  });
 });
